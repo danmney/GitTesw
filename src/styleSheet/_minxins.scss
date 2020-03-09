@@ -1,0 +1,104 @@
+//清除浮动
+.clearfx::after{
+    content: "";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+}
+@mixin useritem {
+    background-color: #f4f9fd;
+    padding-left: 0.3rem;
+    flex: 1;
+}
+//遮罩图
+@mixin hidden {
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    line-height: 140px;
+    position: absolute;
+    top:5px;
+    left:5px;
+    border-radius: 140px;
+    background-color: #fff;
+    border:1px solid #ccc;
+} 
+//旋转内容
+@mixin animate {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 75px;
+    background-color: #00f2fe;
+    background-image: -webkit-linear-gradient(90deg,#7755f3,#00f2fe,#a12616);
+    &::before{
+        content:"";
+        width: 150px;
+        height: 75px;
+        position: absolute;
+        left: 0;
+        top:0;
+        border-radius: 75px 75px 0 0;
+        background-color: #00f2fe;
+        background-image: -webkit-linear-gradient(90deg,#eea2a2 0,#bbc1bf 19%,#57c6e1 42%,#b49fda 79%,#7ac5d8);
+    }
+}
+//图片咨询
+@mixin animeteScale {
+    transform: scale(1.3);
+    opacity: 0.6;
+    transition: all 1s;
+}
+@mixin animeteScalele {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 1s;
+}
+@mixin translateenter {
+    transform: translateY(-6.5rem);
+    transition: all 1s;
+}
+@mixin tranlateleave {
+    transform: translateY(1rem);
+    transition: all 1s;
+}
+
+//动画运行方式
+@mixin animate1 {
+    animation: roateSlow 10s  ease infinite;
+}
+@mixin animate2 {
+    animation: roateSlow 10s 0.5s ease infinite;
+}
+@mixin animate3 {
+    animation: roateSlow 10s 1s ease infinite;
+}
+@mixin animate4 {
+    animation: roateSlow 10s 1.5s ease infinite;
+}
+@mixin aimateLine {
+    animation: roateLine 1s linear infinite;
+}
+
+//动画关键帧
+@keyframes roateLine{
+    0%{
+        transform: rotateZ(0deg)
+    }
+    100%{
+        transform: rotateZ(360deg)
+    }
+}
+@keyframes roateSlow {
+    0%{
+        transform: rotateZ(30deg)
+    }
+    50%{
+        transform: rotateZ(360deg)
+    }
+    100%{
+        transform: rotateZ(30deg)
+    }
+}

@@ -1,0 +1,30 @@
+@font-face{
+    font-family: "FenPinYinTi";
+    src: url("FenPinYinTi-2.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "HARRINGT";
+    src: url("HARRINGT-2.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "SiYu";
+    src: url("SiYuCongCongCaoShuTi-2.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "XinYeYing";
+    src: url("XinYeYingTi-2.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Bareona";
+    src: url("Bareona-2.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
